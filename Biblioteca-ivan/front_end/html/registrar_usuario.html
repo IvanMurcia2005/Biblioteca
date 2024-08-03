@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Libro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/registrarUsuario.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Para alinear el contenido verticalmente */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa; /* Opcional: color de fondo */
+        }
+        .container {
+            max-width: 600px; /* Limita el ancho del formulario */
+            width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+            padding: 0 20px; /* Añade un poco de espacio a los lados */
+        }
+        .btn-volver {
+            display: block;
+            margin: 20px 0; /* Ajusta el margen superior e inferior */
+        }
+        .form-container {
+            padding: 20px;
+            background-color: #fff; /* Opcional: color de fondo para el formulario */
+            border-radius: 8px; /* Opcional: bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para el formulario */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button class="btn btn-secondary btn-volver" onclick="window.history.back()">Volver</button>
+
+        <div class="form-container">
+            <form id="formRegistrarLibro">
+                <div class="form-group">
+                    <label for="Nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="Nombre" placeholder="Ingrese el nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="Direccion" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="Direccion" placeholder="Ingrese la Direccion por favor" required>
+                </div>
+                <div class="form-group">
+                    <label for="CorreoElectronico" class="form-label">CorreoElectronico</label>
+                    <input type="email" class="form-control" id="CorreoElectronico" placeholder="Ingrese el Correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label for="Tipo_de_usuario" class="form-label">Tipo de usuario</label>
+                    <input type="text" class="form-control" id="Tipo_de_usuario" placeholder="Ingrese el tipo de usuario" required>
+                </div>
+
+                <button type="button" class="btn btn-success" onclick="registrarUsuario()">Registrar Usuario</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/usuario.js"></script>
+</body>
+</html>

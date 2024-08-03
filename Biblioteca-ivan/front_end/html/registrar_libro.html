@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Libro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/registrarlibro.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Para alinear el contenido verticalmente */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa; /* Opcional: color de fondo */
+        }
+        .container {
+            max-width: 600px; /* Limita el ancho del formulario */
+            width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+            padding: 0 20px; /* Añade un poco de espacio a los lados */
+        }
+        .btn-volver {
+            display: block;
+            margin: 20px 0; /* Ajusta el margen superior e inferior */
+        }
+        .form-container {
+            padding: 20px;
+            background-color: #fff; /* Opcional: color de fondo para el formulario */
+            border-radius: 8px; /* Opcional: bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para el formulario */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button class="btn btn-secondary btn-volver" onclick="window.history.back()">Volver</button>
+
+        <div class="form-container">
+            <form id="formRegistrarLibro">
+                <div class="form-group">
+                    <label for="Titulo" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="Titulo" placeholder="Ingrese el título del libro por favor" required>
+                </div>
+                <div class="form-group">
+                    <label for="Autor" class="form-label">Autor</label>
+                    <input type="text" class="form-control" id="Autor" placeholder="Ingrese el nombre del autor por favor" required>
+                </div>
+                <div class="form-group">
+                    <label for="Isbn" class="form-label">ISBN</label>
+                    <input type="number" class="form-control" id="Isbn" placeholder="Ingrese el ISBN" required>
+                </div>
+                <div class="form-group">
+                    <label for="Genero" class="form-label">Género</label>
+                    <input type="text" class="form-control" id="Genero" placeholder="Ingrese el género" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero_de_ejemplares_disponibles" class="form-label">Número de ejemplares disponibles</label>
+                    <input type="number" class="form-control" id="numero_de_ejemplares_disponibles" placeholder="Ingrese el número de ejemplares disponibles" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero_de_ejemplares_ocupados" class="form-label">Número de ejemplares ocupados</label>
+                    <input type="number" class="form-control" id="numero_de_ejemplares_ocupados" placeholder="Ingrese el número de ejemplares ocupados" required>
+                </div>
+                <button type="button" class="btn btn-success" onclick="registrarLibro()">Registrar libro</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/libro.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* Archivo CSS: estilos.css */
+
+/* Fuente y colores generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #343a40; /* Texto oscuro */
+    margin: 20px;
+}
+
+/* Estilo de la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.0rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados de la tabla */
+.table th {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Filas de la tabla */
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Estilo para las filas alternas */
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover para filas */
+.table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo de botones en la tabla (en acciones) */
+.table .btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.table .btn-edit {
+    background-color: #28a745;
+    color: white;
+}
+
+.table .btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
